@@ -21,9 +21,10 @@
     "url": "https://github.com/glennreyes/react-countup/issues"
   },
   "homepage": "https://glennreyes.github.io/react-countup",
-  "main": "index.jsx",
+  "main": "build",
   "files": [
-    "index.jsx"
+    "index.jsx",
+    "build"
   ],
   "scripts": {
     "build": "babel index.jsx -d build",
