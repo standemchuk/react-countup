@@ -52,25 +52,6 @@ export const startAnimation = (component) => {
  * Component
  */
 export default class CountUp extends Component {
-  static defaultProps = {
-    className: undefined,
-    decimal: '.',
-    decimals: 0,
-    duration: 3,
-    easingFn: undefined,
-    end: 100,
-    onComplete: undefined,
-    onStart: undefined,
-    prefix: '',
-    separator: ',',
-    start: 0,
-    suffix: '',
-    redraw: false,
-    style: undefined,
-    useEasing: true,
-    useGrouping: false
-  };
-
   componentDidMount() {
     startAnimation(this);
   }
@@ -103,3 +84,22 @@ export default class CountUp extends Component {
     );
   }
 }
+
+CountUp.defaultProps = {
+    className: undefined,
+    decimal: '.',
+    decimals: 0,
+    duration: 3,
+    easingFn: undefined,
+    end: 100,
+    onComplete: undefined,
+    onStart: undefined,
+    prefix: '',
+    separator: ',',
+    start: 0,
+    suffix: '',
+    redraw: false,
+    style: undefined,
+    useEasing: true,
+    useGrouping: false
+  };
