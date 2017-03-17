@@ -52,6 +52,11 @@ export const startAnimation = (component) => {
  * Component
  */
 export default class CountUp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.spanElement = null;
+  }
   componentDidMount() {
     startAnimation(this);
   }
@@ -67,8 +72,6 @@ export default class CountUp extends Component {
   componentDidUpdate() {
     startAnimation(this);
   }
-
-  spanElement = null;
 
   refSpan = (span) => {
     this.spanElement = span;
