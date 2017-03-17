@@ -1,28 +1,7 @@
-// @flow
-
-import React, { Component, Element } from 'react';
+import React, { Component } from 'react';
 import Count from 'countup.js';
 
-type Props = {
-  className?: string,
-  decimal?: string,
-  decimals?: number,
-  duration?: number,
-  easingFn?: () => void,
-  end: number,
-  onComplete?: () => void,
-  onStart?: () => void,
-  prefix?: string,
-  redraw?: boolean, // eslint-disable-line react/no-unused-prop-types
-  separator?: string,
-  start: number,
-  style?: {},
-  suffix?: string,
-  useEasing?: boolean,
-  useGrouping?: boolean,
-};
-
-export const startAnimation = (component: Component<*, *, *>) => {
+export const startAnimation = (component) => {
   if (component && component.spanElement) {
     const {
       decimal,
@@ -38,7 +17,7 @@ export const startAnimation = (component: Component<*, *, *>) => {
       suffix,
       useEasing,
       useGrouping,
-    }: Props = component.props;
+    } = component.props;
 
     const countupInstance = new Count(
       component.spanElement,
@@ -96,7 +75,7 @@ export default class CountUp extends Component {
     startAnimation(this);
   }
 
-  shouldComponentUpdate(nextProps: Props) {
+  shouldComponentUpdate(nextProps) {
     const hasCertainPropsChanged = this.props.duration !== nextProps.duration ||
       this.props.end !== nextProps.end ||
       this.props.start !== nextProps.start;
@@ -110,11 +89,9 @@ export default class CountUp extends Component {
 
   spanElement = null;
 
-  refSpan = (span: Element<*>) => {
+  refSpan = (span) => {
     this.spanElement = span;
   };
-
-  props: Props;
 
   render() {
     const { className, start, style } = this.props;
