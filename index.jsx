@@ -16,7 +16,7 @@ export const startAnimation = (component) => {
       start,
       suffix,
       useEasing,
-      useGrouping,
+      useGrouping
     } = component.props;
 
     const countupInstance = new Count(
@@ -32,7 +32,7 @@ export const startAnimation = (component) => {
         prefix,
         suffix,
         useEasing,
-        useGrouping,
+        useGrouping
       }
     );
 
@@ -43,7 +43,7 @@ export const startAnimation = (component) => {
     countupInstance.start(onComplete);
   } else {
     throw new Error(
-      'You need to pass the CountUp component as an argument!\neg. this.myCountUp.startAnimation(this.myCountUp);',
+      'You need to pass the CountUp component as an argument!\neg. this.myCountUp.startAnimation(this.myCountUp);'
     );
   }
 };
@@ -68,7 +68,7 @@ export default class CountUp extends Component {
     redraw: false,
     style: undefined,
     useEasing: true,
-    useGrouping: false,
+    useGrouping: false
   };
 
   componentDidMount() {
