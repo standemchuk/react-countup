@@ -72,7 +72,7 @@ export default class CountUp extends Component {
     const { className, start, style } = this.props;
 
     return (
-      <span className={className} style={style} ref={this.refSpan}>
+      <span className={className} style={style}>
         {start}
       </span>
     );
