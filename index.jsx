@@ -33,7 +33,7 @@ export const startAnimation = (component) => {
         suffix,
         useEasing,
         useGrouping,
-      },
+      }
     );
 
     if (typeof onStart === 'function') {
